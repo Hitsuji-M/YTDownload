@@ -8,6 +8,7 @@
 
 ## Informations
 - You don't need ffmpeg to run this application
+- Doesn't work with playlists (maybe in an other version)
 - In case there's a problem with the moving function check the filename (in windows the `:` are replaced by `#` for example)
 - This project is an example of an easy tkinter application, there's all the basics to understand for starting easy tkinter programms
 - Enjoy it and feel free to give me feedbacks 
