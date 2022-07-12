@@ -277,11 +277,16 @@ class AppYT():
             ext = ".mp3"
 
         filename = f"{video_info['title']}{ext}".replace(":", "#") # and '#' replaces ':' in windows
-        options={
-            'format':'bestaudio/best',
-            'keepvideo':self.keepVideo,
-            'outtmpl':filename,
-        }
+
+        
+        if self.keepVideo:
+            options={'outtmpl':filename}
+        else:
+            options={
+                'format':'bestaudio/best',
+                'keepvideo':False,
+                'outtmpl':filename,
+            }
 
         with ytdl.YoutubeDL(options) as ydl:
             ydl.download([video_info['webpage_url']])
